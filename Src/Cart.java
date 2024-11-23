@@ -14,6 +14,37 @@ public class Cart {
             System.out.println("Giỏ hàng gần đầy!");
         }
     }
+    public void addDigitalVideoDisc(DigitalVideoDisc[] dvdList) {
+        for (DigitalVideoDisc disc : dvdList) {
+            if (qtyOrdered < MAX_NUMBERS_ORDERED) {
+                itemsOrdered[qtyOrdered] = disc;
+                qtyOrdered++;
+                System.out.println("Đĩa đã được thêm: " + disc.getTitle());
+            } else {
+                System.out.println("Giỏ hàng gần đầy! Không thể thêm đĩa: " + disc.getTitle());
+                break; 
+            }
+        }
+    }
+    public void addDigitalVideoDisc(DigitalVideoDisc dvd1, DigitalVideoDisc dvd2) {
+        if (qtyOrdered < MAX_NUMBERS_ORDERED - 1) { 
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered++;
+            System.out.println("Đĩa đã được thêm: " + dvd1.getTitle());
+            
+            itemsOrdered[qtyOrdered] = dvd2;
+            qtyOrdered++;
+            System.out.println("Đĩa đã được thêm: " + dvd2.getTitle());
+        } else if (qtyOrdered < MAX_NUMBERS_ORDERED) { 
+            itemsOrdered[qtyOrdered] = dvd1;
+            qtyOrdered++;
+            System.out.println("Đĩa đã được thêm: " + dvd1.getTitle());
+            System.out.println("Giỏ hàng gần đầy! Không thể thêm đĩa: " + dvd2.getTitle());
+        } else { 
+            System.out.println("Giỏ hàng đã đầy! Không thể thêm đĩa: " + dvd1.getTitle() + " và " + dvd2.getTitle());
+        }
+    }
+
 
     public void removeDigitalVideoDisc(DigitalVideoDisc disc) {
         boolean found = false;
