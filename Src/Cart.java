@@ -80,4 +80,19 @@ public class Cart {
         }
         System.out.println("Tổng chi phí: " + totalCost());
     }
+    public void printCart2() {
+        System.out.println("***********************CART***********************");
+        System.out.println("Ordered Items:");
+        
+        double totalCost = 0;
+        for (int i = 0; i < qtyOrdered; i++) {
+            System.out.println((i + 1) + ". " + itemsOrdered[i].toString());
+            totalCost += itemsOrdered[i].getCost();
+        }
+        
+        System.out.println("Total cost: " + totalCost + " $");
+        System.out.println("***************************************************");
+    }
+
+
 }
