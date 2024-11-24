@@ -62,5 +62,11 @@ return id;
 public static int getNbDigitalVideoDiscs() {
 return nbDigitalVideoDiscs;
 }
+public String toString() {
+    return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+}
+public boolean isMatch(String title) {
+    return this.title != null && this.title.equalsIgnoreCase(title);
+}
 
 }
