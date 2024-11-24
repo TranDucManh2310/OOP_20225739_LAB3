@@ -1,4 +1,6 @@
-package Src;
+package hust.soict.dsai.aims.cart.Cart;
+
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 
 public class Cart {
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -93,6 +95,32 @@ public class Cart {
         System.out.println("Total cost: " + totalCost + " $");
         System.out.println("***************************************************");
     }
+    public void searchById(int id) {
+        boolean found = false;
+        for (DigitalVideoDisc dvd : itemsOrdered) {
+            if (dvd != null && dvd.getId() == id) {
+                System.out.println("Found: " + dvd.toString());
+                found = true;
+                break;
+            }
+        }
+        if (!found) {
+            System.out.println("No match found for ID: " + id);
+        }
+    }
+    public void searchByTitle(String title) {
+        boolean found = false;
+        for (DigitalVideoDisc dvd : itemsOrdered) {
+            if (dvd != null && dvd.isMatch(title)) {
+                System.out.println("Found: " + dvd.toString());
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("No match found for title: " + title);
+        }
+    }
+
 
 
 }
