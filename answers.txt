@@ -1,1 +1,1 @@
-Java vẫn cho phép người dùng tạo nhiều constructor trong một lớp, điều này được gọi là nạp chồng constructor (constructor overloading). Chúng ta có thể định nghĩa nhiều constructor với các danh sách tham số khác nhau trong cùng một lớp. Mỗi constructor có thể thực hiện các tác vụ khác nhau.
+Java luôn là Pass by Value, nhưng khi làm việc với đối tượng, việc thay đổi trạng thái của đối tượng có thể dẫn đến sự thay đổi bên ngoài phương thức.
