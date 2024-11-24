@@ -1,4 +1,4 @@
-package Src;
+package hust.soict.dsai.aims.disc.DigitalVideoDisc;
 
 public class DigitalVideoDisc {
 private static int nbDigitalVideoDiscs = 0;
@@ -64,6 +64,9 @@ return nbDigitalVideoDiscs;
 }
 public String toString() {
     return "DVD - " + title + " - " + category + " - " + director + " - " + length + ": " + cost + " $";
+}
+public boolean isMatch(String title) {
+    return this.title != null && this.title.equalsIgnoreCase(title);
 }
 
 }

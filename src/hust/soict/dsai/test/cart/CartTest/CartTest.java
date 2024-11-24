@@ -1,4 +1,7 @@
-package Src;
+package hust.soict.dsai.test.cart.CartTest;
+
+import hust.soict.dsai.aims.cart.Cart.Cart;
+import hust.soict.dsai.aims.disc.DigitalVideoDisc.DigitalVideoDisc;
 
 public class CartTest {
 public static void main(String[] args) {
@@ -20,7 +23,11 @@ cart.addDigitalVideoDisc(dvd3);
 
 //Test the print method
 cart.printCart2();
-//To-do: Test the search methods here
+System.out.println("\nSearch by ID:");
+cart.searchById(2); 
+
+System.out.println("\nSearch by Title:");
+cart.searchByTitle("Star Wars");
 
 }
 }
