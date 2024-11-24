@@ -1,6 +1,8 @@
 package Src;
 
 public class DigitalVideoDisc {
+private static int nbDigitalVideoDiscs = 0;
+private int id;
 private String title;
 private String category;
 private String director;
@@ -45,6 +47,20 @@ public DigitalVideoDisc(String title, String category, String director, int leng
 	this.director = director;
 	this.length = length;
 	this.cost = cost;
+	nbDigitalVideoDiscs++;
+	this.id = nbDigitalVideoDiscs; // Gán id cho DVD mới
+}
+public void setTitle(String title) {
+	this.title = title;
+}
+
+public int getId() {
+return id;
+}
+
+// Getter cho số lượng DVD
+public static int getNbDigitalVideoDiscs() {
+return nbDigitalVideoDiscs;
 }
 
 }
